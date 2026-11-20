@@ -36,7 +36,7 @@ def add(a: float, b: float) -> float:
     Returns:
         The sum, a + b.
     """
-    raise NotImplementedError("add() is built on the feature/add branch")
+    return a + b
 
 
 # ---------------------------------------------------------------------
