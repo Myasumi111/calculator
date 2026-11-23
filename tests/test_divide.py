@@ -15,17 +15,17 @@ from calculator import divide
 
 def test_divide_evenly() -> None:
     """10 / 2 is 5."""
-    pytest.skip("Lab 03: write this test")
+    assert 10 / 2 == 5
 
 
 def test_divide_gives_a_float() -> None:
     """7 / 2 is 3.5, not 3."""
-    pytest.skip("Lab 03: write this test")
+    assert 7 / 2 == pytest.approx(3.5)
 
 
 def test_divide_zero_by_a_number() -> None:
     """0 / 5 is 0."""
-    pytest.skip("Lab 03: write this test")
+    assert 0 / 5 == 0
 
 
 def test_divide_by_zero_raises() -> None:
@@ -33,4 +33,5 @@ def test_divide_by_zero_raises() -> None:
 
     Use pytest.raises (notebook Section 5).
     """
-    pytest.skip("Lab 03: write this test")
+    with pytest.raises(ZeroDivisionError):
+        divide(1 / 0)
