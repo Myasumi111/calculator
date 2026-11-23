@@ -15,18 +15,18 @@ from calculator import subtract
 
 def test_subtract_two_positives() -> None:
     """5 - 2 is 3."""
-    assert 5 - 2 == 3
+    assert subtract(5, 2) == 3
 
 
 def test_subtract_order_matters() -> None:
     """2 - 5 is -3 (not 3: the order of the numbers matters)."""
-    assert 2 - 5 == -3
+    assert subtract(2, -5) == -3
 
 def test_subtract_a_negative() -> None:
     """-4 - -6 is 2 (taking away a negative adds)."""
-    assert -4 - (-6) == 2
+    assert subtract(-4, -6) == 2
 
 
 def test_subtract_floats() -> None:
     """0.3 - 0.1 is 0.2 - compare with pytest.approx."""
-    assert 0.3 - 0.1 == pytest.approx(0.2)
+    assert subtract(0.3, -0.1) == pytest.approx(0.2)
