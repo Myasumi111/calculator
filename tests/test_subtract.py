@@ -20,7 +20,7 @@ def test_subtract_two_positives() -> None:
 
 def test_subtract_order_matters() -> None:
     """2 - 5 is -3 (not 3: the order of the numbers matters)."""
-    assert subtract(2, -5) == -3
+    assert subtract(2, 5) == -3
 
 def test_subtract_a_negative() -> None:
     """-4 - -6 is 2 (taking away a negative adds)."""
@@ -29,4 +29,4 @@ def test_subtract_a_negative() -> None:
 
 def test_subtract_floats() -> None:
     """0.3 - 0.1 is 0.2 - compare with pytest.approx."""
-    assert subtract(0.3, -0.1) == pytest.approx(0.2)
+    assert subtract(0.3, 0.1) == pytest.approx(0.2)
