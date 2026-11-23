@@ -25,11 +25,8 @@ def test_add_two_positives() -> None:
 
 def test_add_negatives() -> None:
     """-4 + -6 is -10."""
-    a = -4
-    b = -6
-    expected = -10
-    result = add(a,b)
-    assert result == expected
+
+    assert add(-4,-6) == -10
 
 
 def test_add_zero() -> None:
