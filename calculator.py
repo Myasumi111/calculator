@@ -71,7 +71,7 @@ def multiply(a: float, b: float) -> float:
     Returns:
         The product, a * b. Two negatives make a positive.
     """
-    return a * b
+    raise NotImplementedError("multiply() is built on the feature/add branch")
 
 
 # ---------------------------------------------------------------------
@@ -93,7 +93,7 @@ def divide(a: float, b: float) -> float:
             tests/test_divide.py checks it. Don't change it to return
             something "friendlier" without talking to the team first.
     """
-    return a / b
+    raise NotImplementedError("divide() is built on the feature/add branch")
 
 
 # ---------------------------------------------------------------------
