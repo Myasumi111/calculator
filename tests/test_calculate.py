@@ -18,17 +18,18 @@ from calculator import calculate
 
 def test_calculate_add() -> None:
     """calculate("+", 2, 3) is 5."""
-    pytest.skip("Lab 04: write this test")
+    assert calculate("+", 2,3) == 5
 
 
 def test_calculate_subtract() -> None:
     """calculate("-", 5, 2) is 3."""
-    pytest.skip("Lab 04: write this test")
+    assert calculate("-", 5, 2) == 3
 
 
 def test_calculate_multiply() -> None:
     """calculate("*", 3, 4) is 12."""
-    pytest.skip("Lab 04: write this test")
+    assert calculate("*", 3, 4) == 12
+    
 
 
 # divide() isn't in the first release, so this test stays skipped until
@@ -41,9 +42,10 @@ def test_calculate_divide() -> None:
 
 def test_calculate_unknown_operator() -> None:
     """An operator that isn't +, -, *, or / raises ValueError."""
-    pytest.skip("Lab 04: write this test")
+    with pytest.raises(ValueError):
+        calculate("%", 1, 2)
 
 
 def test_calculate_chain() -> None:
     """One result feeds the next: (2 * 3) + 4 is 10."""
-    pytest.skip("Lab 04: write this test")
+    assert calculate("+",calculate("*", 2, 3), 4) == 10
