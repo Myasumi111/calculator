@@ -1,0 +1,3 @@
+**Q:** Why should the test expect ZeroDivisionError instead of float("inf"), even though infinity might seem friendlier? And when would you not use @pytest.mark.parametrize for a group of tests? 
+
+A. I don't think infinity is friendlier and it causes more trouble later if it keeps running, so it is better to raise an error and stop the code. I would NOT use  @pytest.mark.parametrize to test code with different assertions.

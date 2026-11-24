@@ -54,7 +54,7 @@ def subtract(a: float, b: float) -> float:
         The difference, a - b. Order matters: subtract(5, 2) is 3,
         but subtract(2, 5) is -3.
     """
-    raise NotImplementedError("subtract() is built on the feature/subtract branch")
+    return a - b
 
 
 # ---------------------------------------------------------------------
@@ -71,7 +71,7 @@ def multiply(a: float, b: float) -> float:
     Returns:
         The product, a * b. Two negatives make a positive.
     """
-    raise NotImplementedError("multiply() is built on the feature/multiply branch")
+    raise NotImplementedError("multiply() is built on the feature/add branch")
 
 
 # ---------------------------------------------------------------------
@@ -93,7 +93,7 @@ def divide(a: float, b: float) -> float:
             tests/test_divide.py checks it. Don't change it to return
             something "friendlier" without talking to the team first.
     """
-    raise NotImplementedError("divide() is built on the feature/divide branch")
+    raise NotImplementedError("divide() is built on the feature/add branch")
 
 
 # ---------------------------------------------------------------------
