@@ -16,19 +16,24 @@ from calculator import add
 
 def test_add_two_positives() -> None:
     """2 + 3 is 5."""
-    pytest.skip("Lab 02: write this test")
+    a = 2
+    b = 3
+    expected = 5
+    result = add(a,b)
+    assert result == expected   
 
 
 def test_add_negatives() -> None:
     """-4 + -6 is -10."""
-    pytest.skip("Lab 02: write this test")
+
+    assert add(-4,-6) == -10
 
 
 def test_add_zero() -> None:
     """Adding 0 changes nothing: 7 + 0 is 7."""
-    pytest.skip("Lab 02: write this test")
+    assert add(7,0) == 7
 
 
 def test_add_floats() -> None:
     """0.1 + 0.2 is 0.3 - compare with pytest.approx (notebook Section 4)."""
-    pytest.skip("Lab 02: write this test")
+    assert add(0.1, 0.2) == pytest.approx(0.3)
