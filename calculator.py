@@ -71,7 +71,7 @@ def multiply(a: float, b: float) -> float:
     Returns:
         The product, a * b. Two negatives make a positive.
     """
-    raise NotImplementedError("multiply() is built on the feature/add branch")
+    return a * b
 
 
 # ---------------------------------------------------------------------
