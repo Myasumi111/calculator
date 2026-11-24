@@ -1,0 +1,33 @@
+# .github/workflows/tests.yml
+#
+# A GitHub Actions WORKFLOW: instructions GitHub follows on its own
+# computers whenever something happens in this repository. This one runs
+# every test, so nobody can merge broken code into dev without seeing it.
+
+# The name shown on the repository's Actions tab.
+name: tests
+
+# WHEN to run: on every push to dev, and on every pull request into dev.
+on:
+  push:
+    branches: [dev]
+  pull_request:
+    branches: [dev]
+
+# WHAT to run. A workflow is made of jobs; this one has a single job.
+jobs:
+  pytest:
+    # Borrow a fresh Linux computer from GitHub for each run.
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Download this repository's code onto that computer.
+      - uses: actions/checkout@v5
+      # 2. Install Python.
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      # 3. Install pytest, from requirements.txt.
+      - run: pip install -r requirements.txt
+      # 4. Run every test. If any test fails, this step fails, and the
+      #    run gets a red X instead of a green check.
+      - run: python -m pytest -v
