@@ -34,10 +34,10 @@ def test_calculate_multiply() -> None:
 
 # divide() isn't in the first release, so this test stays skipped until
 # Lab 05. A reason= shows up in pytest's report, so nobody wonders why.
-@pytest.mark.skip(reason="divide ships in v1.1.0 - write this in Lab 05")
+
 def test_calculate_divide() -> None:
     """calculate("/", 7, 2) is 3.5."""
-    pytest.skip("Lab 05: write this test")
+    assert calculate("/", 7, 2) == 3.5
 
 
 def test_calculate_unknown_operator() -> None:
