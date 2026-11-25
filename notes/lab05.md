@@ -1,0 +1,3 @@
+ Q. what would have happened if you had committed the merge with Riley's side, and how would the team have found out? Why is a test a better guard for the team's decision than the docstring alone? And what's one thing you'd say to Riley?
+
+A. If the merge was commited, it would have cause an error everytime there was a division by 0 because divide returns infinity, and the team would have found out later by testing the calculater on Github. The test is better because it can detect bad code. I would tell Riley, "If you face a merge conflict, ask for AI's help."
